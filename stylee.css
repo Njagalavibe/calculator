@@ -1,15 +1,16 @@
-:root{
+:root {
     --screen: #E8FFCE;
     --operators: #6D9886;
     --background: #434242;
-    --background2:#73BBC9;
-    --background3:#FF6969;
-    --backgroun4:#97FEED;
+    --background2: #73BBC9;
+    --background3: #FF6969;
+    --backgroun4: #97FEED;
     --buttons: #1F6E8C;
     --text: #FFF4F4;
-    --onscreen-text:#393E46;
+    --onscreen-text: #393E46;
 }
-.container{
+
+.container {
     border: 2px solid var(--background);
     position: absolute;
     left: 40%;
@@ -19,76 +20,96 @@
     min-height: 400px;
     /*border-radius: 4%;*/
 }
-.logo{
+
+.logo {
     text-align: center;
     margin: 20px 10px 10px 10px;
     font-family: 'Aboreto', cursive;
     font-size: 1.1em;
     font-weight: bolder;
-    color:var(--text) ;
+    color: var(--text);
 }
-.screen{
-   
+
+.screen {
+
     border: 1px solid var(--screen);
     margin: 20px 10px 20px 10px;
-    background-color:var(--screen) ;
-    padding:5px;
-   /* border-radius: 10px;*/
+    background-color: var(--screen);
+    padding: 5px;
+    /* border-radius: 10px;*/
 }
+
 #calc-operation {
     font-size: 1.3em;
     text-align: right;
     color: var(--onscreen-text);
     padding-bottom: .1rem;
 }
+
 #calc-typed {
     font-size: 1.8em;
     text-align: right;
     color: var(--onscreen-text);
 }
-.calc-button-row{
+
+.calc-button-row {
     display: table;
     margin: 10px 10px 10px 10px;
 }
-.opt,.delete {
+
+.opt,
+.delete {
     display: table-cell;
     width: 25%;
     background: var(--operators);
-    color:  var(--text);
+    color: var(--text);
     height: 65px;
     font-size: 1.3rem;
     border: none;
-    border-color:var(--background);
+    border-color: var(--background);
     border-width: 1px 1px 0 0;
     border-style: solid;
     cursor: pointer;
 }
-.fullstop{
+
+.fullstop {
     font-size: 20px;
     font-weight: bolder;
 }
-.numbers,.ac {
+
+.numbers,
+.ac {
     display: table-cell;
     width: 25%;
     background: var(--buttons);
-    color:  var(--text);
+    color: var(--text);
     height: 65px;
     font-size: 1.3rem;
     border: none;
-    border-color:var(--background);
+    border-color: var(--background);
     border-width: 1px 1px 0 0;
     border-style: solid;
     cursor: pointer;
 }
-.numbers:hover{
-    background-color:var(--background2);
+
+.numbers:hover {
+    background-color: var(--background2);
 }
 
-.opt:hover{
-    background-color:var(--backgroun4); 
-    color:var(--background);
+.opt:hover {
+    background-color: var(--backgroun4);
+    color: var(--background);
 }
-.ac:hover,.delete:hover{
-    background-color:var(--background3);
-   
+
+.ac:hover,
+.delete:hover {
+    background-color: var(--background3);
+
+}
+
+.programmer {
+    text-align: center;
+    font-family: 'Freehand';
+    color: var(--text);
+    
 }
