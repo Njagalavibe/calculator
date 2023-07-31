@@ -1,5 +1,6 @@
 :root {
-    --screen: #E8FFCE;
+    --body-color:#F6F4EB;
+    --screen: #DDF7E3;
     --operators: #6D9886;
     --background: #434242;
     --background2: #73BBC9;
@@ -8,6 +9,9 @@
     --buttons: #1F6E8C;
     --text: #FFF4F4;
     --onscreen-text: #393E46;
+}
+body{
+    background-color: var(--body-color);
 }
 
 .container {
@@ -31,7 +35,8 @@
 }
 
 .screen {
-
+    height: 59px;
+    width: 288px;
     border: 1px solid var(--screen);
     margin: 20px 10px 20px 10px;
     background-color: var(--screen);
@@ -40,6 +45,7 @@
 }
 
 #calc-operation {
+    /*font-weight: bold;*/
     font-size: 1.3em;
     text-align: right;
     color: var(--onscreen-text);
@@ -57,8 +63,21 @@
     margin: 10px 10px 10px 10px;
 }
 
-.opt,
-.delete {
+.opt{
+    display: table-cell;
+    width: 25%;
+    background: var(--operators);
+    color: var(--text);
+    height: 65px;
+    font-size: 1.3rem;
+    border: none;
+    border-color: var(--background);
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    cursor: pointer; 
+    font-weight: bolder;
+}
+.delete,.equals{
     display: table-cell;
     width: 25%;
     background: var(--operators);
@@ -75,6 +94,18 @@
 .fullstop {
     font-size: 20px;
     font-weight: bolder;
+    display: table-cell;
+    width: 25%;
+    background: var(--buttons);
+    color: var(--text);
+    height: 65px;
+    font-size: 1.3rem;
+    border: none;
+    border-color: var(--background);
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    cursor: pointer;
+   
 }
 
 .numbers,
@@ -92,14 +123,16 @@
     cursor: pointer;
 }
 
-.numbers:hover {
+
+.numbers:hover, .fullstop:hover {
     background-color: var(--background2);
 }
 
-.opt:hover {
+.opt:hover, .equals:hover {
     background-color: var(--backgroun4);
     color: var(--background);
 }
+
 
 .ac:hover,
 .delete:hover {
