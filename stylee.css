@@ -91,23 +91,6 @@ body{
     cursor: pointer;
 }
 
-.fullstop {
-    font-size: 20px;
-    font-weight: bolder;
-    display: table-cell;
-    width: 25%;
-    background: var(--buttons);
-    color: var(--text);
-    height: 65px;
-    font-size: 1.3rem;
-    border: none;
-    border-color: var(--background);
-    border-width: 1px 1px 0 0;
-    border-style: solid;
-    cursor: pointer;
-   
-}
-
 .numbers,
 .ac {
     display: table-cell;
@@ -124,7 +107,7 @@ body{
 }
 
 
-.numbers:hover, .fullstop:hover {
+.numbers:hover{
     background-color: var(--background2);
 }
 

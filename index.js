@@ -1,7 +1,7 @@
 let clear = document.querySelector(".ac");
 let numbers = document.querySelectorAll(".numbers");
 let operators = document.querySelectorAll(".opt");
-let deleteChar = document.querySelector(".delete");
+let deleteButton = document.querySelector(".delete");
 let previousNumber = document.querySelector("#calc-operation");
 let calculator = document.querySelector(".container");
 let currentNumber = document.querySelector("#calc-typed");
@@ -22,6 +22,10 @@ operators.forEach((operate) => operate.addEventListener("click", function (e) {
     currentNumber.textContent = currentValue;
 
 }))
+deleteButton.addEventListener("click",function() {
+    deleteChar()
+    
+})
 
 clear.addEventListener("click", function () {
      currentValue = "";
@@ -31,6 +35,7 @@ clear.addEventListener("click", function () {
      currentNumber.textContent = currentValue;
 })
 
+
 equals.addEventListener("click",function(){
     calculate()
     previousNumber.textContent = '';
@@ -38,16 +43,26 @@ equals.addEventListener("click",function(){
 })
 
 function processNums(number) {
-    if (currentValue.length < 19) {
-        currentValue += number;
-    }
+    if (number === "." && currentValue.includes(".")) return
+        if (currentValue.length < 19) {
+            currentValue += number;
+        }
 }
 
 
 function processOperator(operate) {
+    if (currentValue === '')return
+    if (previousValue !== ''){
+        calculate()
+    }
     operator = operate;
     previousValue = currentValue;
     currentValue = '';
+}
+ 
+function deleteChar(){
+    currentValue = currentValue.toString().slice(0,-1);
+    
 }
 
 function calculate(){
